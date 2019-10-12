@@ -5,7 +5,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Hamza TAŞ - Computer Engineer / Web Developer - Blog</title>
+	<title>Hamza TAŞ - Computer Engineer / Web Developer - Blog - T-SQL</title>
 	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="/css/ionicons.min.css">
 	<link rel="stylesheet" type="text/css" href="/css/linea.css">
@@ -26,77 +26,40 @@
 					</li>
 					<li>
 						<a class="section-link" href="\blog\about-life">
-							About Life
+							ABOUT LIFE
 						</a>
 					</li>
 					<li>
 						<a class="section-link" href="\blog\sql-server-ve-t-sql">
-							SQL SERVER / T-SQL
+						   SQL SERVER / T-SQL
 						</a>
-					</li>						
+					</li>					
 				</ul>
 			</div>
 			<div class="main-content">
 				<!--==========================================
-					Intro Section
+					blog Section
 				==========================================-->
 				<section id="home" class="home-section section active">
-					<div class="container-fluid">
-						<div class="v-align">
-							<div class="inner">
-								<div class="intro-text">
-									<div class="person-img">
-										<!-- person image -->
-										<img src="./images/site/person.jpg" alt="">
-									</div>
-									<!-- Hi. -->
-									<h4>Hi.</h4>
-									<!-- name -->
-									<h2>Don't Worry</h2>
-									<!-- intro -->
-									<p>
-									 You see a blog you've never seen before in your life
-									</p>
-									<!-- portfolio link -->
-									<!-- <a class="portfolio-link section-link" href="/tr/">
-										View Turkish
-										<i class="fa fa-arrow-circle-o-right"></i>
-									</a> -->
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="intro-footer">
 						<div class="container-fluid">
-							<div class="row">
+							<div class="content-block about-block">
 								
-								<div class="col-xs-12 text-center">
-									<ul class="footer-social">
-										<li>
-											<a href="https://www.instagram.com/hmz.tas/">
-												<i class="fa fa-instagram"></i>
-											</a>
-										</li>
-										<li>
-											<a href="https://www.linkedin.com/in/hamzatas/">
-												<i class="fa fa-linkedin"></i>
-											</a>
-										</li>
-										<li>
-											<a href="https://github.com/HamzaTas">
-												<i class="fa fa-github"></i>
-											</a>
-										</li>
-										<li>
-											<a href="https://stackoverflow.com/users/9377501/hamza-taŞ">
-												<i class="fa fa-stack-overflow"></i>
-											</a>
-										</li>
-									</ul>
-								</div>
+								<div class="about-text" style="margin-top: 50PX;">
+										<h2>SQL Server'da Sistem Veri Tabanları</h2>
+										<h4>master, model, msdb, tempdb</h4>
+										<br/>
+										<p>Sql serverın kullandığı 4 veri tabanı bulunmaktadır.  Bunlar; master, model, msdb ve tempdb’dir.</p>
+										<br/><br/> <img src="sql-system-db.png" /> <br/><br/>
+										<p><b>Master:</b> SQL server ayarları, Sisteme eklenen veri tabanı bilgilerini, sisteme eklenen login bilgilerini vs. sistemle alakalı ne varsa SQL server bu bilgileri bu veri tabanında tutar. Bir Server klonlanmak isteniyorsa master veri tabanının ldf ve mdf dosyaları yeni serverın master veri tabanının ldf ve mdf dosyaları ile değiştirilebilir. Bu dosyalar üzerinde işlem yapmak için SQL Server’ı durdurmak gerekir. </p>
+										<br/> <p><b>Model:</b> oluşturulacak yeni veri tabanı için şablondur. Yeni veri tabanı oluşturulduğunda model veri tabının birebir kopyası çıkarılır. Sistemimizdeki her veri tabanında olması gereken tablolar, view’lar, fonksiyonlar  ve SP’ler varsa bu veri tabanında oluşturulursa yeni veri tabanı oluşturulduğunda bu veri tabanında da oluşturulur. </p>
+										<br/> <p><b>Msdb:</b> sql server agent ta yapılan job bilgilerinin tutulduğu yerdir. Job config lerinide geri getirmek için bu veri tabanı kullanılabilir. </p>
+										<br/> <code>SELECT * FROM SYSJOBS</code>
+										<br/> <code>SELECT * FROM sysschedules</code>
+										<br/><br/> <p> <b>Tempdb:</b> Geçici işlemlerin yapıldığı veri tabanıdır. Group by having işlemlerinde bu tablolar kullanılır. temp yapılar session bazlıdır. Query ekranı veya server kapanırsa temp veri tabanındaki veriler kaybolur. Temp veri tabanları başka sessionda kullanılmaz. Her sessionda kullanılmak istenirse ## ile tanımlanır.</p>
+										<br/><br/> <img src="sql-system-temp-db.png" /> <br/><br/>
+									</div>
 							</div>
 						</div>
-					</div>
 				</section>			
 			</div>
 		</div>
